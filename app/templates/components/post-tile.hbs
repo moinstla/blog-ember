@@ -1,7 +1,7 @@
 <li>
   <h4 class="blog-title" {{action 'postShow'}}>{{post.title}} - {{post.author}}, {{post.created}}</h4>
   {{#if isPostShowing}}
-    <p>{{post.text}}
+    <p>{{post.text}} {{#link-to 'post' post.id}}Edit{{/link-to}}
     </p>
     <p><img src={{post.image}} alt={{post.title}}>
     </p>

@@ -8,6 +8,6 @@ export default Ember.Component.extend({
     },
     postHide: function() {
       this.set('isPostShowing', false);
-    }
+    },
   }
 });
