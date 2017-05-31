@@ -2,8 +2,16 @@
 <br>
 
 <ul id="posts">
-  {{#each model as |post|}}
+  {{#each model.posts as |post|}}
     {{post-tile post=post}}
   {{/each}}
-
 </ul>
+<hr>
+<h4> All Reviews </h4>
+
+<ul>
+  {{#each model.comments as |comment|}}
+    <li>"{{comment.comment}}"  <br> {{comment.name}} - {{comment.date}}</li>
+  {{/each}}
+</ul>
+{{#link-to 'new-comment'}}Add comment{{/link-to}}
