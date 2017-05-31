@@ -1,0 +1,14 @@
+<li>
+  <h4 class="blog-title" {{action 'postShow'}}>{{post.title}} - {{post.author}}, {{post.created}}</h4>
+  {{#if isPostShowing}}
+    <p>{{post.text}}
+    </p>
+    <p><img src={{post.image}} alt={{post.title}}>
+    </p>
+    <p><a href="#" {{action 'postHide'}}>Collapse post</a></p>
+    <br>
+    <hr>
+  {{else}}
+    <!-- <button {{action 'postShow'}}>Show post</button> -->
+  {{/if}}
+</li>
